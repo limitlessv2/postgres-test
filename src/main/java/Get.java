@@ -30,7 +30,7 @@ public class Get {
             Connection conn = connect();
             java.util.Date now = new java.util.Date();
             CallableStatement stmnt =  conn.prepareCall(SQL);
-            stmnt.setString(1, "Venus");
+            stmnt.setString(1, "JUPITER");
             ResultSet rs = stmnt.executeQuery();
             while(rs.next()){
                 String city = rs.getString("City");

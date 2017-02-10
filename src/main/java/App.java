@@ -35,5 +35,21 @@ public class App {
         }   catch (SQLException ex){
             System.out.println(ex.getMessage());
         }
+
+        Update u = new Update(connectionDetails, username, password);
+        try {
+            u.update();
+        }   catch (SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+
+        Get g2 = new Get(connectionDetails, username, password);
+        try {
+            g2.get();
+        }   catch (SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+
+
     }
 }
