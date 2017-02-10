@@ -33,10 +33,13 @@ public class Insert {
             Connection conn = connect();
             java.util.Date now = new java.util.Date();
             CallableStatement stmnt =  conn.prepareCall(SQL);
-            stmnt.setString(1, "JUPITER");
+            stmnt.setString(1, "Venus");
             stmnt.setString(2, "300");
             stmnt.setTimestamp(3, new java.sql.Timestamp(now.getTime()), java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("GMT+00:00")));
             stmnt.execute();
+
+            stmnt.close();
+            conn.close();
         }catch (SQLException ex){
             System.out.println(ex.getMessage());
         }

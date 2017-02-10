@@ -22,9 +22,16 @@ public class App {
         }
         System.out.println("Opened database successfully");
 
-        Insert i = new Insert(connectionDetails, username, password);
+        /*Insert i = new Insert(connectionDetails, username, password);
         try{
             i.insert();
+        }   catch (SQLException ex){
+            System.out.println(ex.getMessage());
+        } */
+
+        Get g = new Get(connectionDetails, username, password);
+        try {
+            g.get();
         }   catch (SQLException ex){
             System.out.println(ex.getMessage());
         }
